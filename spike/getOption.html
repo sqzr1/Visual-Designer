@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+</head>
+<body class="container-fluid text-center">
+
+	
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../node_modules/jquery-ui/dist/jquery-ui.js"></script>
+	<script type="text/javascript">
+
+ (function ($) {
+
+  $.widget( "my.myWidget", {
+
+  		options: {
+			name: "foo"
+		},
+
+		// value() {
+		// 	return this.options;
+		// },
+
+		_setOption: function ( key, value ) {
+			switch (key) {
+			case "name":
+					console.log("uuj7");
+					this.options.name = value;
+					break;
+			default:
+					//this.options[ key ] = value;
+					break;
+			}
+
+			// For UI 1.8, _setOption must be manually invoked
+			// from the base widget
+			//$.Widget.prototype._setOption.apply( this, arguments );
+			// For UI 1.9 the _super method can be used instead
+			this._super( "_setOption", key, value );
+		}
+  });
+})(jQuery);
+
+$(document).ready(function() {
+
+	var w = $('<p>abc</p>')
+		.appendTo('body')
+		.myWidget({name: "bar"});
+
+	var a = $("p");
+	// How do I access the option/property 'name'?
+
+	a.myWidget('option', 'name', 'abc');
+	alert("Name=" + a.myWidget('option', 'name')); //a.myWidget('value').name);
+});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Visual Designer Test</title>
+	
+	<link href="../dist/css/visual-designer.min.css" rel="stylesheet" media="all"/>
+
+</head>
+<body class="container-fluid text-center" style="padding: 10%;">
+
+	<div data-type="visual-designer"></div>
+	
+	<script type="text/javascript" src="../dist/js/visual-designer.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+
+			var bar = $("[data-type='visual-designer']").visualDesigner({});
+		});
+
+	</script>
+</body>
+</html>

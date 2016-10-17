@@ -1,0 +1,75 @@
+ /*!
+ * Visual Designer JQuery Plugin
+ * Author: Sam Zielke-Ryner
+ * Licensed under ...
+ */
+ 
+ @import (reference) "visual-designer.less";
+
+ .vd-widget {
+
+ 	.editable(@defCol, @hoverCol);
+
+ 	&:hover > .vd-widget-menu {
+		display: flex;
+		opacity: 1;
+	}
+}
+
+.vd-widget-menu {
+	position: absolute;
+	display: flex; 
+	left: 50%; 
+	top: 0%;
+	transform: translate(-50%, -75%);
+	z-index: 99999;
+
+	display: none;
+	//opacity: 0;
+    transition: opacity 1s;
+}
+
+.vd-menu-dropdown {
+
+	min-width: initial; 
+	width: initial; 
+	padding: 0;
+}
+
+[class^='vd-menu-col-'],
+[class*=' vd-menu-col-'] {
+
+	min-width: auto;
+	border: none;
+	background-color: transparent;
+
+	& li .btn {
+  		border-radius: 0px;
+  	}
+
+  	& li:first-child .btn:first-child {
+  		border-top-left-radius: 5px;
+  	}
+
+  	& li:first-child .btn:last-child {
+  		border-top-right-radius: 5px;
+  	}
+
+  	& li:last-child .btn:first-child {
+  		border-bottom-left-radius: 5px;
+  	}
+
+  	& li:last-child .btn:last-child {
+  		border-bottom-right-radius: 5px;
+  	}
+}
+
+.vd-menu-col-2 {
+	width: 200%;
+	left: -50%;
+}
+
+.vd-menu-col-3 {
+	width: 297%;
+	left: -98%;
+}

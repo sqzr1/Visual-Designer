@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Visual Designer Test</title>
+	
+	<!-- <link href="../dist/css/visual-designer.min.css" rel="stylesheet" media="all"/> -->
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+	<!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.css"/> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/> -->
+
+
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"/> -->
+
+</head>
+<body class="container-fluid">
+
+	<!-- Row menu -->
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	  </button>
+	</div>
+
+	<br/>
+
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-minus fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-th fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+	  </button>
+	</div>
+
+	<br/>
+
+	<!-- Column menu -->
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	  
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+	  </button>
+
+	  <div class="btn-group btn-group-lg" role="group">
+    	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  	<span class="glyphicon glyphicon-collapse-down" aria-hidden="true"></span>
+		</button>
+	    <ul class="dropdown-menu" style="min-width: initial; padding: 0;">
+	      <li>
+	        <div class="btn-group-vertical btn-group-lg" role="group" aria-label="...">
+	        	<button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+			</div>
+		  </li>
+	    </ul>
+	  </div>
+	  
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+	  </button>
+
+	  <style>
+	  	.vd-menu-col-3 {
+	  		min-width: auto;
+	  		width: 297%;
+	  		left: -100%;
+	  		border: none;
+	  		background-color: transparent;
+	  	}
+
+	  	.vd-menu-col-3 li .btn {
+	  		border-radius: 0px;
+	  	}
+
+	  	.vd-menu-col-3 li:first-child .btn:first-child {
+	  		border-top-left-radius: 5px;
+	  	}
+
+	  	.vd-menu-col-3 li:first-child .btn:last-child {
+	  		border-top-right-radius: 5px;
+	  	}
+
+	  	.vd-menu-col-3 li:last-child .btn:first-child {
+	  		border-bottom-left-radius: 5px;
+	  	}
+
+	  	.vd-menu-col-3 li:last-child .btn:last-child {
+	  		border-bottom-right-radius: 5px;
+	  	}
+	  </style>
+	  
+	  <div class="btn-group btn-group-lg" role="group">
+    	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  	<span class="glyphicon glyphicon-collapse-down" aria-hidden="true"></span>
+		</button>
+	    <ul class="dropdown-menu vd-menu-col-3" style="padding: 0;">
+	      <li>
+	        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+	        	<button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+			</div>
+		  </li>
+		  <li>
+	        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+	        	<button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+			</div>
+		  </li>
+		  <li>
+	        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+	        	<button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+				  <button type="button" class="btn btn-default">
+				  	<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+				  </button>
+			</div>
+		  </li>
+	    </ul>
+	  </div>
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	  </button>
+	</div>
+
+	<br/>
+
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-font fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-photo fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-caret-square-o-down fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-film fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+	  </button>
+	</div>
+
+	<br/>
+
+	<!-- Text Widget menu -->
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-header" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-font" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-size" aria-hidden="true"></span>
+	  </button>
+
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-color" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-bold" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-italic" aria-hidden="true"></span>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	  </button>
+	  
+	  <!-- glyphicon glyphicon-object-align-top DROPDOWN
+	  	glyphicon glyphicon-object-align-top
+	  	glyphicon glyphicon-object-align-bottom
+	  	glyphicon glyphicon-object-align-horizontal
+	  	glyphicon glyphicon-object-align-left
+	  	glyphicon glyphicon-object-align-vertical
+	  	glyphicon glyphicon-object-align-right -->
+	</div>
+
+	<br/>
+
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-th-list fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-header fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-link fa-lg" aria-hidden="true"></i>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<i class="fa fa-font fa-lg" aria-hidden="true"></i>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<i class="fa fa-text-height fa-lg" aria-hidden="true"></i>
+	  </button>
+
+	   <button type="button" class="btn btn-default">
+	  	<i class="fa fa-text-color fa-lg" aria-hidden="true"></i>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<i class="fa fa-text-background fa-lg" aria-hidden="true"></i>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-bold fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-italic fa-lg" aria-hidden="true"></i>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-object-align-top fa-lg" aria-hidden="true"></i>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+	  </button>
+	</div>
+
+	<br/>
+
+	<!-- Image Widget menu -->
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	   
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-color" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	  </button>
+	  
+	  <!-- glyphicon glyphicon-object-align-top DROPDOWN
+	  	glyphicon glyphicon-object-align-top
+	  	glyphicon glyphicon-object-align-bottom
+	  	glyphicon glyphicon-object-align-horizontal
+	  	glyphicon glyphicon-object-align-left
+	  	glyphicon glyphicon-object-align-vertical
+	  	glyphicon glyphicon-object-align-right -->
+	</div>
+
+	<br/>
+
+	<!-- Button Widget menu -->
+	<div class="btn-group btn-group-lg" role="group" aria-label="...">
+	   
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-object-align-top" aria-hidden="true"></span>
+	  </button>
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-color" aria-hidden="true"></span>
+	  </button>
+	   <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-text-background" aria-hidden="true"></span>
+	  </button>
+
+	  <button type="button" class="btn btn-default">
+	  	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	  </button>
+	  
+	  <!-- glyphicon glyphicon-object-align-top DROPDOWN
+	  	glyphicon glyphicon-object-align-top
+	  	glyphicon glyphicon-object-align-bottom
+	  	glyphicon glyphicon-object-align-horizontal
+	  	glyphicon glyphicon-object-align-left
+	  	glyphicon glyphicon-object-align-vertical
+	  	glyphicon glyphicon-object-align-right -->
+	</div>
+	
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- <script type="text/javascript">
+		
+		$(document).ready(function() {
+
+			var bar = $("[data-type='visual-designer']").visualDesigner({});
+		});
+
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> </title>
+<style type="text/css">
+	
+	.widget {
+
+		width: 150px;
+		height: 150px;
+		background-color: #ddd;
+		position: relative;
+	}
+
+	.menu {
+		background-color: #444;
+		display: flex;
+		position: absolute;
+		top: 0;
+		display: none;
+	}
+
+	.widget:hover > .menu {
+		display: flex;
+	}
+
+</style>
+
+</head>
+<body>
+
+<div class="widget" style="width: 500px; height: 500px; background-color: #eee;">
+	<div class="menu">
+		<p>I should ONLY be visible when you hover the big outer widget and NOT when you are hovering the small inner widget</p>
+	</div>
+	<div class="widget" style="left: 200px; top: 200px;">
+		<div class="menu">
+			<p>I should ONLY be visible when you hover the small inner widget</p>
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>

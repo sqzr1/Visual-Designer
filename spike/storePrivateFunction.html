@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> </title>
+	<!-- <link href="../dist/css/visual-designer.min.css" rel="stylesheet" media="all"/> -->
+
+</head>
+<body>
+
+
+
+<script type="text/javascript" src="../dist/js/visual-designer.min.js"></script>
+<script type="text/javascript">
+
+	function MyClass() {
+		this._create = function() {
+
+			var ele = $('<p>abc</p>')
+				.appendTo('body')
+				.click(this.options.customCallback);
+		};
+
+		this.defCallback = function() {
+			console.log("defCallback");
+		};
+
+		this.options = {
+			customCallback: this.defCallback
+		};
+
+		this._create();
+	};
+
+	var myClass = new MyClass({customCallback: function() {
+		console.log('kjhjjhk');
+	}});
+
+</script>
+</body>
+</html>

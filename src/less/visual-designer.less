@@ -1,0 +1,37 @@
+/*!
+ * Visual Designer JQuery Plugin
+ * Author: Sam Zielke-Ryner
+ * Licensed under ...
+ */
+
+ @import (reference) "../../node_modules/bootstrap/less/bootstrap.less";
+
+@defCol: #c1c1c1;
+@hoverCol: #4cb1ff;  
+ 
+.editable(@colour, @primary-color) {
+
+ 	&:hover, 
+ 	&:active {
+ 		border: 2px dashed @primary-color;
+ 	}  
+ }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+ 
+.vd-main {
+	position: relative;
+	background-color: #F9F9F9;
+	border: solid 2px #4cb1ff;
+	border-radius: 5px;
+	min-height: 70vh;
+
+	&:hover > .vd-widget-menu {
+		display: flex;
+		opacity: 1;
+	}
+}

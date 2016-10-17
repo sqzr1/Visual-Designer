@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+</head>
+<body class="container-fluid text-center">
+
+	
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../node_modules/jquery-ui/dist/jquery-ui.js"></script>
+	<script type="text/javascript">
+
+ (function ($) {
+
+  $.widget( "my.myWidget", {
+
+  		_this: this,
+
+		options: {
+			//accessObjectParent: this.instantiator,
+			isUndefined: (this.defCallback === undefined), // this refers to the map/object 
+			// Can I access the maps 'parent'/instantiator?
+			// this.instantiator.defCallback ???
+			callback: _this.defCallback
+		},
+
+		_create: function () {
+
+			this.populateOptions();
+
+			console.log(this.options.isUndefined);  // outputs 'true'
+			this.element.click(this.options.callback.bind(this));
+		},
+
+		defCallback: function () {
+
+			console.log("abc");
+		},
+
+		populateOptions: function() {
+
+			if (this.options.callback === undefined)
+				this.options.callback = this.defCallback;
+		}
+		
+});
+})(jQuery);
+
+$(document).ready(function() {
+
+	var e = $('<p>abc</p>')
+		.appendTo('body')
+		.myWidget();
+});
+
+	</script>
+</body>
+</html>

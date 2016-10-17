@@ -1,0 +1,25 @@
+ /*!
+ * Visual Designer JQuery Plugin
+ * Author: Sam Zielke-Ryner
+ * Licensed under ...
+ */
+
+ @import (reference) "visual-designer.less";
+ @import (reference) "baseWidget.less";
+ 
+ .vd-row-widget {
+
+ 	//.row;
+
+ 	.editable(@defCol, @hoverCol);
+
+ 	position: relative;
+	min-height: 200px;
+	padding: 0px;
+	margin: 0px;
+
+	&:hover > .vd-widget-menu {
+		display: flex;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> </title>
+	
+</head>
+<style>
+
+.widget {
+	position: relative;
+	width: 300px; 
+	height: 300px; 
+	background-color: #ddd;
+}
+
+.widget-menu {
+
+	width: 400px;
+	height: 100px;
+
+	background-color: #555;
+	position: absolute;
+	top: 0;
+
+	display: none; 
+}
+
+.widget:hover .widget-menu {
+	display: flex; /* used to ensure wrapping doesn't occur if the menu is wider than the widget container */
+}
+
+.widget:enabled .widget-menu {
+	display: none;
+}
+
+</style>
+<body>
+
+	<div class="widget">
+		<div class="widget-menu">
+			<button>Btn 1</button>
+		</div>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<p>Hover me to see menu appear. Then click the below button. Now my hovering is screwed up after the animation is complete.</p>
+	</div>
+
+	<br/>
+	<button>Fade In</button>
+	
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../node_modules/jquery-ui/dist/jquery-ui.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$('body > button').click(function() {
+		
+			$('.widget-menu').fadeIn('slow');
+		});
+		
+	});
+
+	</script>
+</body>
+</html>

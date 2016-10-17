@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> </title>
+	
+</head>
+<body>
+
+	
+	
+	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../node_modules/jquery-ui/dist/jquery-ui.js"></script>
+	<script type="text/javascript">
+		
+	(function ($) {
+
+		  $.widget( "my.myWidget", {
+
+				options: {
+					classes: 'btn btn-primary',
+					callback: this.destroy  // allow user to overwrite/provide custom callback
+				},
+
+				_create: function () {
+
+					// Doesn't work
+					this.element.click(this.options.callback);
+
+					// Works: ??
+					//this.element.click(this.destroy);
+				},
+
+				destroy: function () {
+
+					console.log("Clicked");
+					//this.element.removeClass(this.options.classes);
+					this.element.click(undefined);
+					this.element.empty();
+				}
+			});
+	})(jQuery);
+
+	$(document).ready(function() {
+
+		$('<button>abc</button>')
+			.appendTo('body')
+			.myWidget({callback: function() {console.log("abs"); }});
+		
+	});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Visual Designer Test</title>
+	
+	<!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"/> -->
+
+
+	<!-- <link href="../src/css/libs/bootstrap.min.css" rel="stylesheet" media="all"/>
+	<link href="../src/css/libs/medium-editor.min.css" rel="stylesheet" media="all"/>
+	<link href="../src/css/libs/spectrum.css" rel="stylesheet" media="all"/> -->
+
+	<link href="../dist/css/visual-designer.min.css" rel="stylesheet" media="all"/>
+	<link href="css/menuBtn.css" rel="stylesheet" media="all"/>
+
+</head>
+<body class="container-fluid text-center" style="padding: 10%;">
+
+
+	<!-- must a row always contain a col or can it contain another row? -->
+	<div class="vd-main row" style="height: 600px;">
+		<!-- TODO: 	- make bootstrap rows inside canvas have dotted border always be 100% fill
+					- make widgets sit at correct position
+					- Make menu btn's inherit bootstrap btn class
+					- Copy other codes' vcenter css
+		-->
+		<div class="row">
+			<div class="col-xs-12 vd-canvas"> 
+				<div class="col-xs-7">
+					<div class="vd-widget vd-text-widget vcenter">
+						<p>abc</p>
+					</div>
+
+					<div class="vd-widget vd-img-widget vcenter" style="left: 80%; top: 50%;">
+						<img src="images/tw.png" alt="img"/>
+					</div>
+
+					<button class="vd-widget vd-btn-widget vcenter" style="left: 30%; top: 70%;">
+						Abc
+					</button>
+
+				</div>
+				<div class="col-xs-5">
+					
+				</div>
+			</div>
+		</div>
+
+		<div id="main-menu" class="vd-menu row">
+			<div class="col-lg-12 text-center"> 
+				<ul>
+					<li>
+						<button class="vd-menu-btn btn btn-primary vcenter">Text</button>
+					</li>
+					<li>
+						<button class="vd-menu-btn btn btn-primary vcenter">Image</button>
+					</li>
+					<li>
+						<button class="vd-menu-btn btn btn-primary vcenter">Button</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Script Includes -->
+	<!-- <script type="text/javascript" src="../src/js/libs/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="../src/js/libs/jquery.noty.packaged.min.js"></script>
+	<script type="text/javascript" src="../src/js/libs/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../src/js/libs/medium-editor.min.js"></script>
+	<script type="text/javascript" src="../src/js/libs/spectrum.js"></script> -->
+
+	<script type="text/javascript" src="../dist/js/visual-designer.min.js"></script>
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+</body>
+</html>

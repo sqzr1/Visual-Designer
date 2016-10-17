@@ -1,0 +1,42 @@
+{
+  "name": "Visual-Designer",
+  "version": "0.1.0",
+  "main": "dist/visual-designer.js",
+  "homepage": "",
+  "author": {
+    "name": "Sam Zielke-Ryner",
+    "url": "https://github.com/blob/master/AUTHORS.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sazr/abc.git"
+  },
+  "keywords": [
+    "visual",
+    "designer",
+    "jquery",
+    "javascript",
+    "browser",
+    "library"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.*",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-qunit": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "latest",
+    "jshint-stylish": "latest",
+    "matchdep": "*",
+    "jquery": "latest",
+    "jquery-ui": "latest",
+    "bootstrap": "latest",
+    "medium-editor": "latest",
+    "spectrum-colorpicker": "latest",
+    "font-awesome": "latest"
+  }
+}
